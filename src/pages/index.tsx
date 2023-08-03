@@ -1,5 +1,6 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
+import {Link} from 'gatsby'
 
 const pageStyles = {
   color: "#232129",
@@ -160,6 +161,8 @@ const IndexPage: React.FC<PageProps> = () => {
           </li>
         ))}
       </ul>
+      <Link to="/404">404</Link>
+      <Link to="/Canvas">Canvas</Link>
       <ul style={listStyles}>
         {links.map(link => (
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>

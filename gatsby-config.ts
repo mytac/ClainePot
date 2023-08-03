@@ -8,7 +8,30 @@ const config: GatsbyConfig = {
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
-  plugins: [],
+  plugins: [
+    {
+      resolve: "gatsby-plugin-less",
+      options: {
+        lessOptions: {
+          javascriptEnabled: true,
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-antd',
+      options: {
+        style: true
+      }
+    },
+    // 'gatsby-plugin-typescript',
+    // {
+    //   resolve: 'gatsby-plugin-import',
+    //   options: {
+    //     libraryName: 'antd',
+    //     style: true,
+    //   },
+    // },
+  ],
 }
 
 export default config
